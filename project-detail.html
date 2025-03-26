@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">My<span>Portfolio</span></a>
+            <button class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="resume.html">Resume <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="resume.html#personal-info">Personal Info</a></li>
+                            <li><a href="resume.html#experience">Experience</a></li>
+                            <li><a href="resume.html#education">Education</a></li>
+                        </ul>
+                    </li>
+                    <!-- Other menu items -->
+                    <li class="dropdown">
+                        <a href="projects.html">Projects <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="project-detail.html?project=ap-compsci">AP Computer Science A</a></li>
+                            <li><a href="project-detail.html?project=cybersecurity">Cybersecurity</a></li>
+                            <li><a href="project-detail.html?project=engineering-design">Introduction to Engineering
+                                    Design</a></li>
+                            <li><a href="project-detail.html?project=robotics">Advanced Robotics Engineering</a></li>
+                            <li><a href="project-detail.html?project=personal">Personal Projects</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="project-detail">
+            <h1 id="project-title">Project Title</h1>
+
+            <div class="project-detail-content">
+                <div class="project-gallery">
+                    <div class="gallery-grid">
+                        <img src="https://via.placeholder.com/300" alt="Project Image 1">
+                        <img src="https://via.placeholder.com/300" alt="Project Image 2">
+                        <img src="https://via.placeholder.com/300" alt="Project Image 3">
+                        <img src="https://via.placeholder.com/300" alt="Project Image 4">
+                    </div>
+                </div>
+
+                <div class="project-description">
+                    <h2 id="project-subtitle">Project Subtitle</h2>
+                    <p id="project-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.
+                        Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut
+                        eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non
+                        venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit
+                        arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.
+                        Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.
+                        Suspendisse dictum feugiat nisl ut dapibus.</p>
+                </div>
+            </div>
+
+            <div class="project-links">
+                <h3>Additional Resources</h3>
+                <div class="links-container">
+                    <a href="#" class="resource-link">
+                        <i class="fas fa-file-powerpoint"></i> Project Slides
+                    </a>
+                    <a href="#" class="resource-link">
+                        <i class="fas fa-video"></i> Demo Video
+                    </a>
+                    <a href="#" class="resource-link">
+                        <i class="fab fa-github"></i> Source Code
+                    </a>
+                    <a href="#" class="resource-link">
+                        <i class="fas fa-file-pdf"></i> Documentation
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="contact-info">
+                <h3>Contact</h3>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:your-email@example.com">your-email@example.com</a>
+                </p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; <span id="year"></span> My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Get project details based on URL parameter
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const project = urlParams.get('project');
+
+            const projectData = {
+                'ap-compsci': {
+                    title: 'AP Computer Science A Projects',
+                    subtitle: 'Java Programming Projects',
+                    text: 'These projects were developed as part of my AP Computer Science A course. They demonstrate my proficiency in Java programming, object-oriented design, and algorithm development. The projects include a variety of applications from simple console programs to more complex graphical interfaces, showcasing my ability to solve problems through code and implement efficient algorithms.'
+                },
+                'cybersecurity': {
+                    title: 'Cybersecurity Projects',
+                    subtitle: 'Security Analysis and Protection',
+                    text: 'My cybersecurity projects focus on identifying vulnerabilities, implementing security measures, and understanding encryption techniques. These projects gave me hands-on experience with network security, ethical hacking principles, secure coding practices, and digital forensics. I\'ve worked on creating secure systems, penetration testing, and understanding common attack vectors.'
+                },
+                'engineering-design': {
+                    title: 'Introduction to Engineering Design',
+                    subtitle: 'Engineering Fundamentals',
+                    text: 'These projects represent my work in the Introduction to Engineering Design course, where I learned the engineering design process, technical sketching, and 3D modeling. Projects include CAD designs, prototype development, and engineering documentation, demonstrating my ability to translate concepts into tangible solutions while considering constraints and specifications.'
+                },
+                'robotics': {
+                    title: 'Advanced Robotics Engineering',
+                    subtitle: 'Robotics and Automation Systems',
+                    text: 'My robotics projects showcase my skills in designing, building, and programming robotic systems. These include autonomous robots, robotic arms, and automated systems combining hardware and software solutions. I\'ve worked with microcontrollers, sensors, actuators, and control systems to create functional robotic applications that solve real-world problems.'
+                },
+                'personal': {
+                    title: 'Personal Projects',
+                    subtitle: 'Independent Exploration',
+                    text: 'These projects represent my self-driven learning and exploration beyond coursework. They include web development, mobile apps, hardware projects, and other technical explorations that demonstrate my passion for technology and continuous learning. These projects often involve learning new technologies independently and applying them to create innovative solutions.'
+                }
+            };
+
+            if (project && projectData[project]) {
+                document.getElementById('project-title').textContent = projectData[project].title;
+                document.getElementById('project-subtitle').textContent = projectData[project].subtitle;
+                document.getElementById('project-text').textContent = projectData[project].text;
+            }
+        });
+    </script>
+</body>
+
+</html>

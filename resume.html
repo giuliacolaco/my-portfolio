@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">My<span>Portfolio</span></a>
+            <button class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="resume.html">Resume <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="resume.html#personal-info">Personal Info</a></li>
+                            <li><a href="resume.html#experience">Experience</a></li>
+                            <li><a href="resume.html#education">Education</a></li>
+                        </ul>
+                    </li>
+                    <!-- Other menu items -->
+                    <li class="dropdown">
+                        <a href="projects.html">Projects <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="project-detail.html?project=ap-compsci">AP Computer Science A</a></li>
+                            <li><a href="project-detail.html?project=cybersecurity">Cybersecurity</a></li>
+                            <li><a href="project-detail.html?project=engineering-design">Introduction to Engineering
+                                    Design</a></li>
+                            <li><a href="project-detail.html?project=robotics">Advanced Robotics Engineering</a></li>
+                            <li><a href="project-detail.html?project=personal">Personal Projects</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="resume-section">
+            <h1>My Resume</h1>
+
+            <section id="personal-info" class="resume-category">
+                <h2>Personal Information</h2>
+                <p><strong>Name:</strong> Your Name</p>
+                <p><strong>Address:</strong> 123 Main St, City, State ZIP</p>
+                <p><strong>Phone:</strong> (123) 456-7890</p>
+                <p><strong>Email:</strong> your.email@example.com</p>
+            </section>
+
+            <section id="experience" class="resume-category">
+                <h2>Experience</h2>
+                <div class="experience-item">
+                    <h3>Job Title 1</h3>
+                    <p class="company">Company Name | 2020 - Present</p>
+                    <ul>
+                        <li>Responsibility or achievement description</li>
+                        <li>Responsibility or achievement description</li>
+                        <li>Responsibility or achievement description</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Job Title 2</h3>
+                    <p class="company">Company Name | 2018 - 2020</p>
+                    <ul>
+                        <li>Responsibility or achievement description</li>
+                        <li>Responsibility or achievement description</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="certifications" class="resume-category">
+                <h2>Certifications</h2>
+                <ul>
+                    <li>Certification Name - Issuing Organization (Year)</li>
+                    <li>Certification Name - Issuing Organization (Year)</li>
+                </ul>
+            </section>
+
+            <section id="education" class="resume-category">
+                <h2>Education</h2>
+                <div class="education-item">
+                    <h3>Degree Name</h3>
+                    <p class="institution">University Name | 2016 - 2020</p>
+                    <p>GPA: 3.8/4.0</p>
+                    <p>Relevant coursework: Course 1, Course 2, Course 3</p>
+                </div>
+            </section>
+
+            <section id="projects" class="resume-category">
+                <h2>Projects</h2>
+                <div class="project-item">
+                    <h3>Project Name</h3>
+                    <p class="date">2022</p>
+                    <ul>
+                        <li>Project description and your contributions</li>
+                        <li>Technologies used: HTML, CSS, JavaScript</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="skills" class="resume-category">
+                <h2>Skills</h2>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3>Technical Skills</h3>
+                        <ul>
+                            <li>Programming Languages: JavaScript, Python, Java</li>
+                            <li>Web Development: HTML, CSS, React</li>
+                            <li>Database: SQL, MongoDB</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Soft Skills</h3>
+                        <ul>
+                            <li>Teamwork and Collaboration</li>
+                            <li>Problem Solving</li>
+                            <li>Communication</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="languages" class="resume-category">
+                <h2>Languages</h2>
+                <ul>
+                    <li>English (Fluent)</li>
+                    <li>Spanish (Intermediate)</li>
+                </ul>
+            </section>
+
+            <div class="download-resume">
+                <a href="resume.pdf" download class="download-btn">
+                    <i class="fas fa-download"></i> Download Resume (PDF)
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="contact-info">
+                <h3>Contact</h3>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:your-email@example.com">your-email@example.com</a>
+                </p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; <span id="year"></span> My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
