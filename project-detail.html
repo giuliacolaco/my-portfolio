@@ -25,7 +25,11 @@
                         <ul class="dropdown-menu">
                             <li><a href="resume.html#personal-info">Personal Info</a></li>
                             <li><a href="resume.html#experience">Experience</a></li>
+                            <li><a href="resume.html#certifications">Certifications</a></li>
                             <li><a href="resume.html#education">Education</a></li>
+                            <li><a href="resume.html#projects">Projects</a></li>
+                            <li><a href="resume.html#skills">Skills</a></li>
+                            <li><a href="resume.html#languages">Languages</a></li>
                         </ul>
                     </li>
                     <!-- Other menu items -->
@@ -53,42 +57,21 @@
 
             <div class="project-detail-content">
                 <div class="project-gallery">
-                    <div class="gallery-grid">
-                        <img src="https://via.placeholder.com/300" alt="Project Image 1">
-                        <img src="https://via.placeholder.com/300" alt="Project Image 2">
-                        <img src="https://via.placeholder.com/300" alt="Project Image 3">
-                        <img src="https://via.placeholder.com/300" alt="Project Image 4">
+                    <div class="gallery-grid" id="project-gallery">
+                        <!-- Images will be inserted here by JavaScript -->
                     </div>
                 </div>
 
                 <div class="project-description">
                     <h2 id="project-subtitle">Project Subtitle</h2>
-                    <p id="project-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.
-                        Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut
-                        eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non
-                        venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit
-                        arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.
-                        Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.
-                        Suspendisse dictum feugiat nisl ut dapibus.</p>
+                    <p id="project-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
                 </div>
             </div>
 
             <div class="project-links">
                 <h3>Additional Resources</h3>
-                <div class="links-container">
-                    <a href="#" class="resource-link">
-                        <i class="fas fa-file-powerpoint"></i> Project Slides
-                    </a>
-                    <a href="#" class="resource-link">
-                        <i class="fas fa-video"></i> Demo Video
-                    </a>
-                    <a href="#" class="resource-link">
-                        <i class="fab fa-github"></i> Source Code
-                    </a>
-                    <a href="#" class="resource-link">
-                        <i class="fas fa-file-pdf"></i> Documentation
-                    </a>
+                <div class="links-container" id="project-links">
+                    <!-- Links will be inserted here by JavaScript -->
                 </div>
             </div>
         </section>
@@ -99,11 +82,18 @@
         <div class="container footer-container">
             <div class="contact-info">
                 <h3>Contact</h3>
-                <p><i class="fas fa-envelope"></i> <a href="mailto:your-email@example.com">your-email@example.com</a>
+                <p><i class="fas fa-envelope"></i>
+                    <a href="mailto:giulia.colaco.silva@gmail.com">giulia.colaco.silva@gmail.com</a>
                 </p>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/giulia-colaco-647b1b2a0" target="_blank" rel="noopener noreferrer"
+                        aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/giuliacolaco" target="_blank" rel="noopener noreferrer"
+                        aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -123,34 +113,141 @@
                 'ap-compsci': {
                     title: 'AP Computer Science A Projects',
                     subtitle: 'Java Programming Projects',
-                    text: 'These projects were developed as part of my AP Computer Science A course. They demonstrate my proficiency in Java programming, object-oriented design, and algorithm development. The projects include a variety of applications from simple console programs to more complex graphical interfaces, showcasing my ability to solve problems through code and implement efficient algorithms.'
+                    text: 'These projects were developed as part of my AP Computer Science A course...',
+                    resources: [
+                        { type: 'slides', url: 'https://example.com/apcs-slides1', label: 'Java Basics Presentation' },
+                        { type: 'slides', url: 'https://example.com/apcs-slides2', label: 'OOP Concepts' },
+                        { type: 'video', url: 'https://example.com/apcs-demo1', label: 'Sorting Algorithm Demo' },
+                        { type: 'code', url: 'https://github.com/giuliacolaco/apcs-projects', label: 'Source Code' }
+                    ],
+                    images: [
+                        { src: 'assets/apcs-project1.jpg', link: 'https://example.com/apcs-slides1' },
+                        { src: 'assets/apcs-project2.jpg', link: 'https://example.com/apcs-slides2' },
+                        { src: 'assets/apcs-project3.jpg', link: 'https://example.com/apcs-demo1' },
+                        { src: 'assets/apcs-project4.jpg', link: 'https://github.com/giuliacolaco/apcs-projects' }
+                    ]
                 },
                 'cybersecurity': {
                     title: 'Cybersecurity Projects',
                     subtitle: 'Security Analysis and Protection',
-                    text: 'My cybersecurity projects focus on identifying vulnerabilities, implementing security measures, and understanding encryption techniques. These projects gave me hands-on experience with network security, ethical hacking principles, secure coding practices, and digital forensics. I\'ve worked on creating secure systems, penetration testing, and understanding common attack vectors.'
+                    text: 'My cybersecurity projects focus on identifying vulnerabilities...',
+                    resources: [
+                        { type: 'slides', url: 'https://example.com/cyber-slides1', label: 'Security Fundamentals' },
+                        { type: 'slides', url: 'https://example.com/cyber-slides2', label: 'Encryption Techniques' },
+                        { type: 'video', url: 'https://example.com/cyber-demo1', label: 'Penetration Testing Demo' },
+                        { type: 'code', url: 'https://github.com/giuliacolaco/cyber-projects', label: 'Security Scripts' }
+                    ],
+                    images: [
+                        { src: 'assets/cyber-project1.jpg', link: 'https://example.com/cyber-slides1' },
+                        { src: 'assets/cyber-project2.jpg', link: 'https://example.com/cyber-slides2' },
+                        { src: 'assets/cyber-project3.jpg', link: 'https://example.com/cyber-demo1' },
+                        { src: 'assets/cyber-project4.jpg', link: 'https://github.com/giuliacolaco/cyber-projects' }
+                    ]
                 },
                 'engineering-design': {
                     title: 'Introduction to Engineering Design',
                     subtitle: 'Engineering Fundamentals',
-                    text: 'These projects represent my work in the Introduction to Engineering Design course, where I learned the engineering design process, technical sketching, and 3D modeling. Projects include CAD designs, prototype development, and engineering documentation, demonstrating my ability to translate concepts into tangible solutions while considering constraints and specifications.'
+                    text: 'These projects represent my work in the Introduction to Engineering Design course...',
+                    resources: [
+                        { type: 'slides', url: 'https://docs.google.com/presentation/d/1xVC9lPm5lDsPn1O5IOulGsLA0YpgOGQSNuDyjXYhIbM/edit?usp=sharing', label: 'F1 Car Design' },
+                        { type: 'slides', url: 'https://docs.google.com/presentation/d/1rRvr4zyYUV3vUU_S-uzz-NxSuo8rOKHjs-rODts4hnY/edit?usp=sharing', label: 'Illusion Lamp' },
+                        { type: 'slides', url: 'https://docs.google.com/presentation/d/1Rahd13gMh_qWyH6xmKLFUy5nYolnm9orkTpVOnEv4zk/edit?usp=sharing', label: 'Miniature Train' },
+                        { type: 'slides', url: 'https://docs.google.com/presentation/d/1Z-8GxiR97f0GYHB51RXGiHZaHiZtIGwtyqNgC-xtfeY/edit?usp=sharing', label: 'Cookie Cutter' }
+                    ],
+                    images: [
+                        { src: 'assets/f1-car.png', link: 'https://docs.google.com/presentation/d/1xVC9lPm5lDsPn1O5IOulGsLA0YpgOGQSNuDyjXYhIbM/edit?usp=sharing' },
+                        { src: 'assets/illusion-lamp.png', link: 'https://docs.google.com/presentation/d/1rRvr4zyYUV3vUU_S-uzz-NxSuo8rOKHjs-rODts4hnY/edit?usp=sharing' },
+                        { src: 'assets/miniature-train.png', link: 'https://docs.google.com/presentation/d/1Rahd13gMh_qWyH6xmKLFUy5nYolnm9orkTpVOnEv4zk/edit?usp=sharing' },
+                        { src: 'assets/cookie-cutter.png', link: 'https://docs.google.com/presentation/d/1Z-8GxiR97f0GYHB51RXGiHZaHiZtIGwtyqNgC-xtfeY/edit?usp=sharing' }
+                    ]
                 },
                 'robotics': {
                     title: 'Advanced Robotics Engineering',
                     subtitle: 'Robotics and Automation Systems',
-                    text: 'My robotics projects showcase my skills in designing, building, and programming robotic systems. These include autonomous robots, robotic arms, and automated systems combining hardware and software solutions. I\'ve worked with microcontrollers, sensors, actuators, and control systems to create functional robotic applications that solve real-world problems.'
+                    text: 'My robotics projects showcase my skills in designing, building...',
+                    resources: [
+                        { type: 'slides', url: 'https://example.com/robotics-slides1', label: 'Robot Arm Design' },
+                        { type: 'slides', url: 'https://example.com/robotics-slides2', label: 'Autonomous Navigation' },
+                        { type: 'video', url: 'https://example.com/robotics-demo1', label: 'Obstacle Course' },
+                        { type: 'code', url: 'https://github.com/giuliacolaco/robotics-projects', label: 'Control Code' }
+                    ],
+                    images: [
+                        { src: 'assets/robotics-project1.jpg', link: 'https://example.com/robotics-slides1' },
+                        { src: 'assets/robotics-project2.jpg', link: 'https://example.com/robotics-slides2' },
+                        { src: 'assets/robotics-project3.jpg', link: 'https://example.com/robotics-demo1' },
+                        { src: 'assets/robotics-project4.jpg', link: 'https://github.com/giuliacolaco/robotics-projects' }
+                    ]
                 },
                 'personal': {
                     title: 'Personal Projects',
                     subtitle: 'Independent Exploration',
-                    text: 'These projects represent my self-driven learning and exploration beyond coursework. They include web development, mobile apps, hardware projects, and other technical explorations that demonstrate my passion for technology and continuous learning. These projects often involve learning new technologies independently and applying them to create innovative solutions.'
+                    text: 'These projects represent my self-driven learning and exploration...',
+                    resources: [
+                        { type: 'slides', url: 'https://example.com/personal-slides1', label: 'Hello Kitty Project' },
+                        { type: 'slides', url: 'https://example.com/personal-slides2', label: 'Web App Design' },
+                        { type: 'video', url: 'https://example.com/personal-demo1', label: 'Mobile App Demo' },
+                        { type: 'code', url: 'https://github.com/giuliacolaco/personal-projects', label: 'All Projects Code' }
+                    ],
+                    images: [
+                        { src: 'assets/personal-project1.jpg', link: 'https://example.com/personal-slides1' },
+                        { src: 'assets/hello-kitty.png', link: 'https://example.com/personal-slides2' },
+                        { src: 'assets/personal-project3.jpg', link: 'https://example.com/personal-demo1' },
+                        { src: 'assets/personal-project4.jpg', link: 'https://github.com/giuliacolaco/personal-projects' }
+                    ]
                 }
             };
 
             if (project && projectData[project]) {
-                document.getElementById('project-title').textContent = projectData[project].title;
-                document.getElementById('project-subtitle').textContent = projectData[project].subtitle;
-                document.getElementById('project-text').textContent = projectData[project].text;
+                const projectInfo = projectData[project];
+
+                // Update text content
+                document.getElementById('project-title').textContent = projectInfo.title;
+                document.getElementById('project-subtitle').textContent = projectInfo.subtitle;
+                document.getElementById('project-text').textContent = projectInfo.text;
+
+                // Update images with clickable links
+                const gallery = document.getElementById('project-gallery');
+                gallery.innerHTML = '';
+
+                projectInfo.images.forEach(image => {
+                    const link = document.createElement('a');
+                    link.href = image.link;
+                    link.target = '_blank';
+
+                    const img = document.createElement('img');
+                    img.src = image.src;
+                    img.alt = projectInfo.title + ' image';
+                    img.onerror = function () {
+                        this.src = 'assets/placeholder.jpg';
+                    };
+
+                    link.appendChild(img);
+                    gallery.appendChild(link);
+                });
+
+                // Update resource links
+                const linksContainer = document.getElementById('project-links');
+                linksContainer.innerHTML = '';
+
+                projectInfo.resources.forEach(resource => {
+                    const link = document.createElement('a');
+                    link.href = resource.url;
+                    link.target = '_blank';
+                    link.className = 'resource-link';
+
+                    // Choose appropriate icon based on resource type
+                    let iconClass;
+                    switch (resource.type) {
+                        case 'slides': iconClass = 'fas fa-file-powerpoint'; break;
+                        case 'video': iconClass = 'fas fa-video'; break;
+                        case 'code': iconClass = 'fab fa-github'; break;
+                        case 'pdf': iconClass = 'fas fa-file-pdf'; break;
+                        default: iconClass = 'fas fa-link';
+                    }
+
+                    link.innerHTML = `<i class="${iconClass}"></i> ${resource.label}`;
+                    linksContainer.appendChild(link);
+                });
             }
         });
     </script>

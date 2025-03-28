@@ -1,74 +1,74 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Update copyright year
     document.getElementById('year').textContent = new Date().getFullYear();
-    
+
     // Mobile menu toggle
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const mainMenu = document.querySelector('.main-menu');
-    
+
     if (mobileMenuToggle && mainMenu) {
-        mobileMenuToggle.addEventListener('click', function() {
+        mobileMenuToggle.addEventListener('click', function () {
             mainMenu.classList.toggle('show');
         });
     }
-    
+
     // Dropdown functionality
     document.querySelectorAll('.dropdown > a').forEach(dropdownLink => {
-        dropdownLink.addEventListener('click', function(e) {
+        dropdownLink.addEventListener('click', function (e) {
             if (window.innerWidth <= 768) {
                 e.preventDefault();
                 const dropdown = this.parentElement;
                 const dropdownMenu = dropdown.querySelector('.dropdown-menu');
-                
+
                 // Close other dropdowns
                 document.querySelectorAll('.dropdown-menu').forEach(menu => {
                     if (menu !== dropdownMenu) {
                         menu.classList.remove('show');
                     }
                 });
-                
+
                 dropdownMenu.classList.toggle('show');
             }
         });
     });
-    
+
     // Close dropdowns when clicking outside
-    document.addEventListener('click', function(e) {
+    document.addEventListener('click', function (e) {
         if (!e.target.closest('.dropdown') && window.innerWidth <= 768) {
             document.querySelectorAll('.dropdown-menu').forEach(menu => {
                 menu.classList.remove('show');
             });
         }
     });
-    
+
     // Make project cards clickable
     document.querySelectorAll('.project-card').forEach(card => {
-        card.addEventListener('click', function() {
+        card.addEventListener('click', function () {
             const link = this.querySelector('a');
             if (link) {
                 window.location.href = link.href;
             }
         });
     });
-    
+
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            
+
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
-            
+
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 const headerHeight = document.querySelector('header').offsetHeight;
                 const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-                
+
                 window.scrollTo({
                     top: targetPosition,
                     behavior: 'smooth'
                 });
-                
+
                 // Update URL without jumping
                 if (history.pushState) {
                     history.pushState(null, null, targetId);
@@ -104,5 +104,9 @@ document.addEventListener('DOMContentLoaded', function() {
             subtitle: 'Independent Learning',
             text: 'Projects I\'ve worked on independently to expand my skills and explore new technologies.'
         }
+    };
+
+    img.onerror = function () {
+        this.src = 'assets/placeholder.jpg';
     };
 });
